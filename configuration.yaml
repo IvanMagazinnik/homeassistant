@@ -1,0 +1,35 @@
+homeassistant:
+  customize: !include customize.yaml
+  packages: !include_dir_named packages
+  name: !secret server_name
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  unit_system: metric
+  time_zone: Europe/Moscow
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+
+lovelace:
+  mode: yaml
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include includes/groups.yaml
+automation: !include includes/automations.yaml
+script: !include includes/scripts.yaml
+scene: !include includes/scenes.yaml
+recorder: !include includes/recorder.yaml
+
+# sensor: !include_dir_merge_list includes/sensors
+
+####################################################
+#                                                  #
+#                      Logger                      #
+#                                                  #
+####################################################
+
+logger:
+  default: info

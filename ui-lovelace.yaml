@@ -1,0 +1,165 @@
+title: Мой Дом (ihome)
+views:
+####################################################
+#                                                  #
+#                   Sensors Page                   #
+#                                                  #
+####################################################
+  - title: Sensors
+    icon: mdi:camera
+    cards:
+      - type: vertical-stack
+        cards:
+        - type: markdown
+          content: >
+            **Doors**
+        - type: entities
+          entities:
+          - binary_sensor.door_window_sensor_158d00041bc65d
+        - type: markdown
+          content: >
+            **Water**
+        - type: entities
+          entities:
+          - binary_sensor.water_leak_sensor_158d00045ad2e1
+        - type: markdown
+          content: >
+            **Motion**
+        - type: entities
+          entities:
+          - binary_sensor.motion_sensor_158d0003f4c4c1
+
+####################################################
+#                                                  #
+#                Server Status Page                #
+#                                                  #
+####################################################
+
+  - title: Server Status
+    icon: mdi:server
+
+    cards:
+
+      - type: vertical-stack
+        cards:
+
+        - type: markdown
+          content: >
+            **Current State**
+
+        - type: entities
+          show_header_toggle: false
+          entities:
+            - entity: sensor.time
+              name: Time
+              icon: mdi:clock-outline
+            - entity: sensor.date
+              name: Date
+              icon: mdi:calendar-account-outline
+
+        - type: entities
+          show_header_toggle: false
+          entities:
+            - entity: sensor.db_size
+              name: DB Size
+              icon: mdi:database
+
+      - type: vertical-stack
+        cards:
+        - type: markdown
+          content: >
+            **Charts**
+
+        - type: horizontal-stack
+          cards:
+            - type: gauge
+              name: CPU Load
+              entity: sensor.processor_use
+              unit: '%'
+              severity:
+                green: 0
+                yellow: 60
+                red: 85
+            - type: gauge
+              name: Memory Load
+              entity: sensor.memory_use_percent
+              unit: '%'
+              severity:
+                green: 0
+                yellow: 60
+                red: 85
+        - type: horizontal-stack
+          cards:
+            - type: gauge
+              name: Storage usage
+              entity: sensor.disk_use_percent
+              unit: '%'
+              severity:
+                green: 0
+                yellow: 50
+                red: 75
+            - type: gauge
+              name: Free Spase
+              entity: sensor.disk_free
+              unit: 'Gb'
+              severity:
+                red: 50
+                yellow: 100
+                green: 150
+
+####################################################
+#                                                  #
+#                    Weather Page                  #
+#                                                  #
+####################################################
+
+  - title: Weather
+    icon: mdi:weather-sunny
+    cards:
+      - type: weather-forecast
+        entity: weather.home
+
+####################################################
+#                                                  #
+#                    Batteries Page                #
+#                                                  #
+####################################################
+
+  - title: Batteries
+    icon: mdi:battery
+    cards:
+      - type: vertical-stack
+        cards:
+        - type: markdown
+          content: >
+            **Charge Level**
+        - type: entities
+          show_header_toggle: false
+          entities:
+            - entity: sensor.battery_158d00045ad2e1
+            - entity: sensor.battery_158d00041bc65d
+            - entity: sensor.battery_158d0003f4c4c1
+
+####################################################
+#                                                  #
+#                    Controls Page                 #
+#                                                  #
+####################################################
+
+  - title: Controls
+    icon: mdi:lightbulb
+    cards:
+      - type: vertical-stack
+        cards:
+        - type: markdown
+          content: >
+            **Light**
+        - type: entities
+          show_header_toggle: false
+          entities:
+            - entity: light.gateway_light_286c0788bafc
+            - entity: sensor.illumination_286c0788bafc
+        - type: entities
+          show_header_toggle: false
+          entities:
+            - entity: light.entrance_bulb

@@ -1,0 +1,36 @@
+# Door sensor 1
+binary_sensor.door_window_sensor_158d00041bc65d:
+  friendly_name: Door Sensor 1
+  icon: mdi:door
+
+# Illumination sensor
+sensor.illumination_286c0788bafc:
+  friendly_name: Gateway Illumination
+  device_class: illuminance
+
+# Water sensor
+binary_sensor.water_leak_sensor_158d00045ad2e1:
+  name: water_sensor_bathroom
+  friendly_name: Water Leek Sensor Bathroom 2nd floor
+  device_class: moisture
+
+# Battereys
+sensor.battery_158d00045ad2e1:
+  friendly_name: "Water Leek Sensor Bathroom 2nd floor Battery"
+  device_class: battery
+sensor.battery_158d00041bc65d:
+  friendly_name: "Door Sensor 1 Battery"
+  device_class: battery
+sensor.battery_158d0003f4c4c1:
+  friendly_name: "Motion Sensor 1 Battery"
+  device_class: battery
+
+# Light gateway
+light.gateway_light_286c0788bafc:
+  friendly_name: Gateway Light
+  name: gateway_light
+
+# Motion Sensor enterance
+binary_sensor.motion_sensor_158d0003f4c4c1:
+  friendly_name: Enterance Motion Sensor
+  device_class: motion

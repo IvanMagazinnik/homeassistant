@@ -1,0 +1,11 @@
+####################################################
+#                                                  #
+#                      Philips                     #
+#                                                  #
+####################################################
+light:
+  - platform: xiaomi_miio
+    name: Entrance Bulb
+    host: !secret xiaomi_phlips_light_bulb_enterance_ip
+    token: !secret xiaomi_phlips_light_bulb_enterance_token
+    model: philips.light.bulb
