@@ -3,3 +3,4 @@ secrets.yaml
 .vscode
 .storage
 tts
+*.db
