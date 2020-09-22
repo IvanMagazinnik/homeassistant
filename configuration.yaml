@@ -33,3 +33,19 @@ recorder: !include includes/recorder.yaml
 
 logger:
   default: info
+
+
+####################################################
+#                                                  #
+#                      Notifiers                   #
+#                                                  #
+####################################################
+
+twilio:
+  account_sid: !secret twilio_sid
+  auth_token: !secret twilio_token
+
+notify:
+  - name: twilio_caller
+    platform: twilio_call
+    from_number: !secret twilio_phone_number

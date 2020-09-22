@@ -31,6 +31,23 @@ views:
 
 ####################################################
 #                                                  #
+#                   Sensors Page                   #
+#                                                  #
+####################################################
+  - title: Beok Control
+    icon: mdi:home-thermometer-outline
+    cards:
+      - type: vertical-stack
+        cards:
+        - type: markdown
+          content: >
+            **Beok Home**
+        - type: entities
+          entities:
+          - switch.kitchen_thermal_control
+
+####################################################
+#                                                  #
 #                Server Status Page                #
 #                                                  #
 ####################################################

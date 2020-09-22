@@ -34,3 +34,4 @@ light.gateway_light_286c0788bafc:
 binary_sensor.motion_sensor_158d0003f4c4c1:
   friendly_name: Enterance Motion Sensor
   device_class: motion
+  scan_interval: 5

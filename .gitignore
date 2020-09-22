@@ -4,3 +4,8 @@ secrets.yaml
 .storage
 tts
 *.db
+*.pyc
+node-red/*
+!node-red/flows.json
+custom_components/hacs
+appdaemon
