@@ -1,0 +1,8 @@
+switch:
+- platform: localtuya
+  host: 192.168.1.52
+  device_id: 62531570a4cf12e5b139
+  local_key: 70856fca9bf0eb66
+  name: tuya_smart_main_enterance_valve
+  friendly_name: tuya_smart_valve
+  protocol_version: 3.3

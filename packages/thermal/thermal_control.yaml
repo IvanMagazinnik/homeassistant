@@ -6,3 +6,10 @@ switch:
   use_external_temp: false
   turn_off_mode: min_temp
   turn_on_mode: 25.0
+
+climate:
+  platform: floureon
+  name: kitchen thermal control climate
+  mac: !secret thermal_control_mac
+  host: !secret thermal_control_host
+  use_external_temp: false
